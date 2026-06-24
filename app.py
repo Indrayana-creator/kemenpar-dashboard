@@ -755,14 +755,14 @@ except FileNotFoundError:
 # 5. CONFIG
 # =========================================================
 DPP_IMAGES = {
-    "Mandalika": ["assets/dpp/mandalika.jpeg", "assets/dpp/Mandalika.jpg", "assets/dpp/mandalika.png"],
+    "Mandalika": ["assets/dpp/Mandalika.jpeg", "assets/dpp/Mandalika.jpg", "assets/dpp/Mandalika.png"],
     "Morotai": ["assets/dpp/morotai.jpeg", "assets/dpp/morotai.jpg.jpeg"],
     "Raja Ampat": ["assets/dpp/raja_ampat.jpeg", "assets/dpp/Raja Ampat.jpeg"],
     "Wakatobi": ["assets/dpp/wakatobi.jpeg"],
     "Likupang": ["assets/dpp/likupang.jpeg"],
     "Bangka Belitung": ["assets/dpp/bangka_belitung.jpeg", "assets/dpp/Bangka Belitung _ Indonesia.jpeg"],
-    "Bromo": ["assets/dpp/bromo.jpeg", "assets/dpp/Bromo.jpg", "assets/dpp/bromo.jpg"],
-    "Borobudur": ["assets/dpp/borobudur.jpeg", "assets/dpp/Borobudur.jpg", "assets/dpp/borobudur.jpg"],
+    "Bromo": ["assets/dpp/Bromo.jpeg", "assets/dpp/Bromo.jpg", "assets/dpp/Bromo.jpg"],
+    "Borobudur": ["assets/dpp/Borobudur.jpeg", "assets/dpp/Borobudur.jpg", "assets/dpp/Borobudur.jpg"],
     "Danau Toba": ["assets/dpp/danau_toba.jpeg", "assets/dpp/danautoba.jpeg"],
     "Labuan Bajo": ["assets/dpp/labuan_bajo.jpeg", "assets/dpp/labuanbajo.jpeg"]
 }
