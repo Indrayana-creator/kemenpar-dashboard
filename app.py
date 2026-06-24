@@ -762,7 +762,7 @@ DPP_IMAGES = {
     "Likupang": ["assets/dpp/likupang.jpeg"],
     "Bangka Belitung": ["assets/dpp/bangka_belitung.jpeg", "assets/dpp/Bangka Belitung _ Indonesia.jpeg"],
     "Bromo": ["assets/dpp/bromo.jpeg", "assets/dpp/Bromo.jpg", "assets/dpp/bromo.jpg"],
-    "Borobudur": ["assets/dpp/borobudur.jpeg", "assets/dpp/Borobudur.jpg", "assets/dpp/borobudur.jpg"]
+    "Borobudur": ["assets/dpp/borobudur.jpeg", "assets/dpp/Borobudur.jpg", "assets/dpp/borobudur.jpg"],
     "Danau Toba": ["assets/dpp/danau_toba.jpeg", "assets/dpp/danautoba.jpeg"],
     "Labuan Bajo": ["assets/dpp/labuan_bajo.jpeg", "assets/dpp/labuanbajo.jpeg"]
 }
