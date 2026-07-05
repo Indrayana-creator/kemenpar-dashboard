@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6a97d243f1636322ce9dd11cddf88a84 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_6a97d243f1636322ce9dd11cddf88a84" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6a97d243f1636322ce9dd11cddf88a84 = L.map(
+                "map_6a97d243f1636322ce9dd11cddf88a84",
+                {
+                    center: [-2.5, 118.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": false,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d7b307cfd4e448fb3fc98b5faa8a3bbe = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d7b307cfd4e448fb3fc98b5faa8a3bbe.addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            var circle_marker_eb4285fa41f693ddf0f53dc35989d32f = L.circleMarker(
+                [-7.9425, 112.953],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            circle_marker_eb4285fa41f693ddf0f53dc35989d32f.bindTooltip(
+                `<div>
+                     Bromo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2ebd44f2d5980a888dcedb43ef385c11 = L.marker(
+                [-7.4425, 112.953],
+                {
+}
+            ).addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            var div_icon_c56bc1e70895335272db35b5146bc1c8 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 14pt; font-weight: bold; color: black; white-space: nowrap; text-shadow: 2px 2px 4px white;\u0027\u003eBromo\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_2ebd44f2d5980a888dcedb43ef385c11.setIcon(div_icon_c56bc1e70895335272db35b5146bc1c8);
+            
+    
+            var circle_marker_8299ead92bc95ecbb4b34bba6d93a37a = L.circleMarker(
+                [-2.5594, 107.671],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            circle_marker_8299ead92bc95ecbb4b34bba6d93a37a.bindTooltip(
+                `<div>
+                     Tanjung Kelayang
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_26b07c9003b54a20ee7598046d6661a7 = L.marker(
+                [-2.0594, 107.671],
+                {
+}
+            ).addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            var div_icon_a0aa4108666614c3c563b1ac0ab90f18 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 14pt; font-weight: bold; color: black; white-space: nowrap; text-shadow: 2px 2px 4px white;\u0027\u003eTanjung Kelayang\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_26b07c9003b54a20ee7598046d6661a7.setIcon(div_icon_a0aa4108666614c3c563b1ac0ab90f18);
+            
+    
+            var circle_marker_b40aef946ccb927ac3ef6544338db9cf = L.circleMarker(
+                [-5.3166, 123.5833],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            circle_marker_b40aef946ccb927ac3ef6544338db9cf.bindTooltip(
+                `<div>
+                     Wakatobi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7cb8db317e0c087861afd17f1e15c612 = L.marker(
+                [-4.8166, 123.5833],
+                {
+}
+            ).addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            var div_icon_0a06446c6b17567323223da8d62701aa = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 14pt; font-weight: bold; color: black; white-space: nowrap; text-shadow: 2px 2px 4px white;\u0027\u003eWakatobi\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_7cb8db317e0c087861afd17f1e15c612.setIcon(div_icon_0a06446c6b17567323223da8d62701aa);
+            
+    
+            var circle_marker_ed2d35169f3a5df7a88f47f106a0415a = L.circleMarker(
+                [-0.2319, 130.5136],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            circle_marker_ed2d35169f3a5df7a88f47f106a0415a.bindTooltip(
+                `<div>
+                     Raja Ampat
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7c993597ccc5a7974e7edd1b46e2ef80 = L.marker(
+                [0.2681, 130.5136],
+                {
+}
+            ).addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            var div_icon_950fb401df88415dda99e16e14bab107 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 14pt; font-weight: bold; color: black; white-space: nowrap; text-shadow: 2px 2px 4px white;\u0027\u003eRaja Ampat\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_7c993597ccc5a7974e7edd1b46e2ef80.setIcon(div_icon_950fb401df88415dda99e16e14bab107);
+            
+    
+            var circle_marker_496eee6e07f93f91f03c1921311cf020 = L.circleMarker(
+                [2.6166, 98.7666],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            circle_marker_496eee6e07f93f91f03c1921311cf020.bindTooltip(
+                `<div>
+                     Danau Toba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8ef425ed6d72a21c736a6bbf5e7ce2db = L.marker(
+                [3.1166, 98.7666],
+                {
+}
+            ).addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            var div_icon_ba1255ec089fc94bab6f3cf39cc056dd = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 14pt; font-weight: bold; color: black; white-space: nowrap; text-shadow: 2px 2px 4px white;\u0027\u003eDanau Toba\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_8ef425ed6d72a21c736a6bbf5e7ce2db.setIcon(div_icon_ba1255ec089fc94bab6f3cf39cc056dd);
+            
+    
+            var circle_marker_9de9b65ba7ad57780af9954dea0b45d0 = L.circleMarker(
+                [-7.6079, 110.2038],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            circle_marker_9de9b65ba7ad57780af9954dea0b45d0.bindTooltip(
+                `<div>
+                     Borobudur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9ab9182792a494a1ea94f084d2c6b0d7 = L.marker(
+                [-7.1079, 110.2038],
+                {
+}
+            ).addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            var div_icon_086c1bad43cbc67bc3a091d04306b9d0 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 14pt; font-weight: bold; color: black; white-space: nowrap; text-shadow: 2px 2px 4px white;\u0027\u003eBorobudur\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_9ab9182792a494a1ea94f084d2c6b0d7.setIcon(div_icon_086c1bad43cbc67bc3a091d04306b9d0);
+            
+    
+            var circle_marker_e224d5f2e4a02946094178e4c8e1ae71 = L.circleMarker(
+                [-8.895, 116.295],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            circle_marker_e224d5f2e4a02946094178e4c8e1ae71.bindTooltip(
+                `<div>
+                     Mandalika
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_363b39b76e6d33691791dc2f275be44b = L.marker(
+                [-8.395, 116.295],
+                {
+}
+            ).addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            var div_icon_86bd558353c89e5169b01e43f498c303 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 14pt; font-weight: bold; color: black; white-space: nowrap; text-shadow: 2px 2px 4px white;\u0027\u003eMandalika\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_363b39b76e6d33691791dc2f275be44b.setIcon(div_icon_86bd558353c89e5169b01e43f498c303);
+            
+    
+            var circle_marker_e9fe65b5171983b28f78a4ab1c4face4 = L.circleMarker(
+                [-8.4964, 119.8877],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            circle_marker_e9fe65b5171983b28f78a4ab1c4face4.bindTooltip(
+                `<div>
+                     Labuan Bajo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bf8bb563bf9ed7adcf4b42fc01958079 = L.marker(
+                [-7.9963999999999995, 119.8877],
+                {
+}
+            ).addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            var div_icon_916dbb4285a5d1ddfb1741496970a4c7 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 14pt; font-weight: bold; color: black; white-space: nowrap; text-shadow: 2px 2px 4px white;\u0027\u003eLabuan Bajo\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_bf8bb563bf9ed7adcf4b42fc01958079.setIcon(div_icon_916dbb4285a5d1ddfb1741496970a4c7);
+            
+    
+            var circle_marker_f25e385f4a861059bcd82ea1c102210e = L.circleMarker(
+                [1.6826, 125.0566],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            circle_marker_f25e385f4a861059bcd82ea1c102210e.bindTooltip(
+                `<div>
+                     Likupang
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5c3f78a8ca313014173628e12f83b41b = L.marker(
+                [2.1826, 125.0566],
+                {
+}
+            ).addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            var div_icon_4b207ecb6e34684fb812a7dd4c5b1fd6 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 14pt; font-weight: bold; color: black; white-space: nowrap; text-shadow: 2px 2px 4px white;\u0027\u003eLikupang\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_5c3f78a8ca313014173628e12f83b41b.setIcon(div_icon_4b207ecb6e34684fb812a7dd4c5b1fd6);
+            
+    
+            var circle_marker_29da53490482a76521380a0953851182 = L.circleMarker(
+                [2.0401, 128.293],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            circle_marker_29da53490482a76521380a0953851182.bindTooltip(
+                `<div>
+                     Morotai
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2d84a0e6b75778347269600717a7b04b = L.marker(
+                [2.5401, 128.293],
+                {
+}
+            ).addTo(map_6a97d243f1636322ce9dd11cddf88a84);
+        
+    
+            var div_icon_037187db1920e061cc87be81bc97b2ed = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 14pt; font-weight: bold; color: black; white-space: nowrap; text-shadow: 2px 2px 4px white;\u0027\u003eMorotai\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_2d84a0e6b75778347269600717a7b04b.setIcon(div_icon_037187db1920e061cc87be81bc97b2ed);
+            
+</script>
+</html>

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d83c4b96c12b9d6dc6c9cf46a92dd749 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d83c4b96c12b9d6dc6c9cf46a92dd749" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d83c4b96c12b9d6dc6c9cf46a92dd749 = L.map(
+                "map_d83c4b96c12b9d6dc6c9cf46a92dd749",
+                {
+                    center: [-0.7893, 113.9213],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2d8bd06cf1c8fb0cf9b3d799f227d62c = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2d8bd06cf1c8fb0cf9b3d799f227d62c.addTo(map_d83c4b96c12b9d6dc6c9cf46a92dd749);
+        
+    
+            var marker_82eacabfae5e3c58968f32f7d00ae02f = L.marker(
+                [-7.9425, 112.953],
+                {
+}
+            ).addTo(map_d83c4b96c12b9d6dc6c9cf46a92dd749);
+        
+    
+            var icon_39ef28fccdefa8f1f8ffa97f98199263 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f2d87790a8329cbecea7fabeb957c8d7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_79e3c55d9b91d62d74f67553dce38845 = $(`<div id="html_79e3c55d9b91d62d74f67553dce38845" style="width: 100.0%; height: 100.0%;">     <b>Bromo</b><br>     Kategori: Zona Defisit Infrastruktur<br>     Gap Score: 0.90<br>     Demand: 1.00 | Supply: 0.10     </div>`)[0];
+                popup_f2d87790a8329cbecea7fabeb957c8d7.setContent(html_79e3c55d9b91d62d74f67553dce38845);
+            
+        
+
+        marker_82eacabfae5e3c58968f32f7d00ae02f.bindPopup(popup_f2d87790a8329cbecea7fabeb957c8d7)
+        ;
+
+        
+    
+    
+            marker_82eacabfae5e3c58968f32f7d00ae02f.bindTooltip(
+                `<div>
+                     Klik untuk info Bromo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_82eacabfae5e3c58968f32f7d00ae02f.setIcon(icon_39ef28fccdefa8f1f8ffa97f98199263);
+            
+    
+            var marker_08ed229ac2a42d380764ee0d08bbc4fa = L.marker(
+                [-2.5594, 107.671],
+                {
+}
+            ).addTo(map_d83c4b96c12b9d6dc6c9cf46a92dd749);
+        
+    
+            var icon_46c2a10c64b24915db8ce7ad23453448 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_75d088834a3282e86de27ebd04cab3c7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_72501350b79680724a60936762703a44 = $(`<div id="html_72501350b79680724a60936762703a44" style="width: 100.0%; height: 100.0%;">     <b>Tanjung Kelayang</b><br>     Kategori: Zona Defisit Infrastruktur<br>     Gap Score: 0.66<br>     Demand: 0.67 | Supply: 0.01     </div>`)[0];
+                popup_75d088834a3282e86de27ebd04cab3c7.setContent(html_72501350b79680724a60936762703a44);
+            
+        
+
+        marker_08ed229ac2a42d380764ee0d08bbc4fa.bindPopup(popup_75d088834a3282e86de27ebd04cab3c7)
+        ;
+
+        
+    
+    
+            marker_08ed229ac2a42d380764ee0d08bbc4fa.bindTooltip(
+                `<div>
+                     Klik untuk info Tanjung Kelayang
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_08ed229ac2a42d380764ee0d08bbc4fa.setIcon(icon_46c2a10c64b24915db8ce7ad23453448);
+            
+    
+            var marker_4d1b38514893d645c57be54e2f7d6147 = L.marker(
+                [-5.3166, 123.5833],
+                {
+}
+            ).addTo(map_d83c4b96c12b9d6dc6c9cf46a92dd749);
+        
+    
+            var icon_72ef586710ca899cf215d5c40a17b78e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_842c1fb3c602db79b207157337a06510 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dfb53e77a374ae278a8f8e5ac42f773b = $(`<div id="html_dfb53e77a374ae278a8f8e5ac42f773b" style="width: 100.0%; height: 100.0%;">     <b>Wakatobi</b><br>     Kategori: Zona Defisit Infrastruktur<br>     Gap Score: 0.64<br>     Demand: 0.64 | Supply: 0.00     </div>`)[0];
+                popup_842c1fb3c602db79b207157337a06510.setContent(html_dfb53e77a374ae278a8f8e5ac42f773b);
+            
+        
+
+        marker_4d1b38514893d645c57be54e2f7d6147.bindPopup(popup_842c1fb3c602db79b207157337a06510)
+        ;
+
+        
+    
+    
+            marker_4d1b38514893d645c57be54e2f7d6147.bindTooltip(
+                `<div>
+                     Klik untuk info Wakatobi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4d1b38514893d645c57be54e2f7d6147.setIcon(icon_72ef586710ca899cf215d5c40a17b78e);
+            
+    
+            var marker_a27aa3083e83d86d061518cf8e7aa9c6 = L.marker(
+                [-0.2319, 130.5136],
+                {
+}
+            ).addTo(map_d83c4b96c12b9d6dc6c9cf46a92dd749);
+        
+    
+            var icon_47390f57138aecc8f1a9baf7f34e71ce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a6fd4b2ec4819a33482380dd1104eeb7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_14aee3b75f1d43a071e7fd223df849a3 = $(`<div id="html_14aee3b75f1d43a071e7fd223df849a3" style="width: 100.0%; height: 100.0%;">     <b>Raja Ampat</b><br>     Kategori: Zona Mapan Premium<br>     Gap Score: 0.19<br>     Demand: 0.90 | Supply: 0.70     </div>`)[0];
+                popup_a6fd4b2ec4819a33482380dd1104eeb7.setContent(html_14aee3b75f1d43a071e7fd223df849a3);
+            
+        
+
+        marker_a27aa3083e83d86d061518cf8e7aa9c6.bindPopup(popup_a6fd4b2ec4819a33482380dd1104eeb7)
+        ;
+
+        
+    
+    
+            marker_a27aa3083e83d86d061518cf8e7aa9c6.bindTooltip(
+                `<div>
+                     Klik untuk info Raja Ampat
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a27aa3083e83d86d061518cf8e7aa9c6.setIcon(icon_47390f57138aecc8f1a9baf7f34e71ce);
+            
+    
+            var marker_e3407d619d757c645e1892a6bc6c793c = L.marker(
+                [2.6166, 98.7666],
+                {
+}
+            ).addTo(map_d83c4b96c12b9d6dc6c9cf46a92dd749);
+        
+    
+            var icon_c608e87130bb645195cf1193f7874a14 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d0c02870dcf187e141c77ca7b6f96535 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d53ab7a1bbc4e13ca831665a1a48989c = $(`<div id="html_d53ab7a1bbc4e13ca831665a1a48989c" style="width: 100.0%; height: 100.0%;">     <b>Danau Toba</b><br>     Kategori: Zona Mapan Premium<br>     Gap Score: 0.17<br>     Demand: 0.86 | Supply: 0.69     </div>`)[0];
+                popup_d0c02870dcf187e141c77ca7b6f96535.setContent(html_d53ab7a1bbc4e13ca831665a1a48989c);
+            
+        
+
+        marker_e3407d619d757c645e1892a6bc6c793c.bindPopup(popup_d0c02870dcf187e141c77ca7b6f96535)
+        ;
+
+        
+    
+    
+            marker_e3407d619d757c645e1892a6bc6c793c.bindTooltip(
+                `<div>
+                     Klik untuk info Danau Toba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e3407d619d757c645e1892a6bc6c793c.setIcon(icon_c608e87130bb645195cf1193f7874a14);
+            
+    
+            var marker_6ddf23ad908a7b41131c57f0b403cd5c = L.marker(
+                [-7.6079, 110.2038],
+                {
+}
+            ).addTo(map_d83c4b96c12b9d6dc6c9cf46a92dd749);
+        
+    
+            var icon_23f972857ab2a45b3f7d02e984e2cca2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_966c4dd0f4c3cfdb8b8ba63e2dcce892 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f9acb220742f96b779e53709865ff85e = $(`<div id="html_f9acb220742f96b779e53709865ff85e" style="width: 100.0%; height: 100.0%;">     <b>Borobudur</b><br>     Kategori: Zona Mapan Premium<br>     Gap Score: 0.08<br>     Demand: 0.83 | Supply: 0.75     </div>`)[0];
+                popup_966c4dd0f4c3cfdb8b8ba63e2dcce892.setContent(html_f9acb220742f96b779e53709865ff85e);
+            
+        
+
+        marker_6ddf23ad908a7b41131c57f0b403cd5c.bindPopup(popup_966c4dd0f4c3cfdb8b8ba63e2dcce892)
+        ;
+
+        
+    
+    
+            marker_6ddf23ad908a7b41131c57f0b403cd5c.bindTooltip(
+                `<div>
+                     Klik untuk info Borobudur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6ddf23ad908a7b41131c57f0b403cd5c.setIcon(icon_23f972857ab2a45b3f7d02e984e2cca2);
+            
+    
+            var marker_1c014dacfcd79e67221461e3253f2c40 = L.marker(
+                [-8.895, 116.295],
+                {
+}
+            ).addTo(map_d83c4b96c12b9d6dc6c9cf46a92dd749);
+        
+    
+            var icon_d625049272fbc0088f22c3b79cb01791 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d8c1c65421736f336990b3f822956fe1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b0caf399ddd37689a4f9f3ed03008a44 = $(`<div id="html_b0caf399ddd37689a4f9f3ed03008a44" style="width: 100.0%; height: 100.0%;">     <b>Mandalika</b><br>     Kategori: Zona Mapan Premium<br>     Gap Score: -0.10<br>     Demand: 0.56 | Supply: 0.66     </div>`)[0];
+                popup_d8c1c65421736f336990b3f822956fe1.setContent(html_b0caf399ddd37689a4f9f3ed03008a44);
+            
+        
+
+        marker_1c014dacfcd79e67221461e3253f2c40.bindPopup(popup_d8c1c65421736f336990b3f822956fe1)
+        ;
+
+        
+    
+    
+            marker_1c014dacfcd79e67221461e3253f2c40.bindTooltip(
+                `<div>
+                     Klik untuk info Mandalika
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1c014dacfcd79e67221461e3253f2c40.setIcon(icon_d625049272fbc0088f22c3b79cb01791);
+            
+    
+            var marker_001e6bc635158c9fd37545a59748edfe = L.marker(
+                [-8.4964, 119.8877],
+                {
+}
+            ).addTo(map_d83c4b96c12b9d6dc6c9cf46a92dd749);
+        
+    
+            var icon_cdbded2f5525c52b9d29710a241969fe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_44c9380c756fc49340cc7202394caa7e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0b25701b48cee3f4cc5d0fd74b564500 = $(`<div id="html_0b25701b48cee3f4cc5d0fd74b564500" style="width: 100.0%; height: 100.0%;">     <b>Labuan Bajo</b><br>     Kategori: Zona Mapan Premium<br>     Gap Score: -0.13<br>     Demand: 0.87 | Supply: 1.00     </div>`)[0];
+                popup_44c9380c756fc49340cc7202394caa7e.setContent(html_0b25701b48cee3f4cc5d0fd74b564500);
+            
+        
+
+        marker_001e6bc635158c9fd37545a59748edfe.bindPopup(popup_44c9380c756fc49340cc7202394caa7e)
+        ;
+
+        
+    
+    
+            marker_001e6bc635158c9fd37545a59748edfe.bindTooltip(
+                `<div>
+                     Klik untuk info Labuan Bajo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_001e6bc635158c9fd37545a59748edfe.setIcon(icon_cdbded2f5525c52b9d29710a241969fe);
+            
+    
+            var marker_a3167a75e3336fd6198435b1cf5baade = L.marker(
+                [1.6826, 125.0566],
+                {
+}
+            ).addTo(map_d83c4b96c12b9d6dc6c9cf46a92dd749);
+        
+    
+            var icon_5840ae08ed6c2812bcb37e425a748191 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6a7d9dae2ab27c5e1f06f0a50e11384f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e21ac09cf36735baad7602f5989e1ae4 = $(`<div id="html_e21ac09cf36735baad7602f5989e1ae4" style="width: 100.0%; height: 100.0%;">     <b>Likupang</b><br>     Kategori: Zona Mapan Premium<br>     Gap Score: -0.27<br>     Demand: 0.66 | Supply: 0.93     </div>`)[0];
+                popup_6a7d9dae2ab27c5e1f06f0a50e11384f.setContent(html_e21ac09cf36735baad7602f5989e1ae4);
+            
+        
+
+        marker_a3167a75e3336fd6198435b1cf5baade.bindPopup(popup_6a7d9dae2ab27c5e1f06f0a50e11384f)
+        ;
+
+        
+    
+    
+            marker_a3167a75e3336fd6198435b1cf5baade.bindTooltip(
+                `<div>
+                     Klik untuk info Likupang
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a3167a75e3336fd6198435b1cf5baade.setIcon(icon_5840ae08ed6c2812bcb37e425a748191);
+            
+    
+            var marker_c274020d6e62245d452f58bcd159081f = L.marker(
+                [2.0401, 128.293],
+                {
+}
+            ).addTo(map_d83c4b96c12b9d6dc6c9cf46a92dd749);
+        
+    
+            var icon_f180280cfbff2fce6b7cbf320149e7fb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bab09bee4dddcc3341cfd3d58270e5a9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5f2e22d7aef1578bbd13f6967383f1b3 = $(`<div id="html_5f2e22d7aef1578bbd13f6967383f1b3" style="width: 100.0%; height: 100.0%;">     <b>Morotai</b><br>     Kategori: Zona Defisit Peminat<br>     Gap Score: -0.54<br>     Demand: 0.00 | Supply: 0.54     </div>`)[0];
+                popup_bab09bee4dddcc3341cfd3d58270e5a9.setContent(html_5f2e22d7aef1578bbd13f6967383f1b3);
+            
+        
+
+        marker_c274020d6e62245d452f58bcd159081f.bindPopup(popup_bab09bee4dddcc3341cfd3d58270e5a9)
+        ;
+
+        
+    
+    
+            marker_c274020d6e62245d452f58bcd159081f.bindTooltip(
+                `<div>
+                     Klik untuk info Morotai
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c274020d6e62245d452f58bcd159081f.setIcon(icon_f180280cfbff2fce6b7cbf320149e7fb);
+            
+</script>
+</html>
