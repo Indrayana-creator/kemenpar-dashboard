@@ -743,14 +743,6 @@ def load_data():
     df = pd.read_csv("final_dashboard_dataset_K3.csv")
     df["DPP"] = df["DPP"].replace({"Tanjung Kelayang": "Bangka Belitung"})
     df["Cluster_K3"] = df["Cluster_K3"].astype(str)
-    
-    try:
-        df_detail = pd.read_csv("final_dashboard_dataset.csv")
-        df_detail["DPP"] = df_detail["DPP"].replace({"Tanjung Kelayang": "Bangka Belitung"})
-        df = pd.merge(df, df_detail, on="DPP", how="left")
-    except Exception:
-        pass
-        
     return df
 
 try:
@@ -763,14 +755,14 @@ except FileNotFoundError:
 # 5. CONFIG
 # =========================================================
 DPP_IMAGES = {
-    "Mandalika": ["assets/dpp/mandalika.jpeg", "assets/dpp/Mandalika - Lombok Indonesia.jpeg"],
+    "Mandalika": ["assets/dpp/Mandalika.jpeg", "assets/dpp/Mandalika.jpg", "assets/dpp/Mandalika.png"],
     "Morotai": ["assets/dpp/morotai.jpeg", "assets/dpp/morotai.jpg.jpeg"],
     "Raja Ampat": ["assets/dpp/raja_ampat.jpeg", "assets/dpp/Raja Ampat.jpeg"],
     "Wakatobi": ["assets/dpp/wakatobi.jpeg"],
     "Likupang": ["assets/dpp/likupang.jpeg"],
     "Bangka Belitung": ["assets/dpp/bangka_belitung.jpeg", "assets/dpp/Bangka Belitung _ Indonesia.jpeg"],
-    "Bromo": ["assets/dpp/bromo.jpeg", "assets/dpp/Bromo Mountain.jpeg"],
-    "Borobudur": ["assets/dpp/borobudur.jpeg", "assets/dpp/Candi Borobudur.jpeg"],
+    "Bromo": ["assets/dpp/Bromo.jpeg", "assets/dpp/Bromo.jpg", "assets/dpp/Bromo.jpg"],
+    "Borobudur": ["assets/dpp/Borobudur.jpeg", "assets/dpp/Borobudur.jpg", "assets/dpp/Borobudur.jpg"],
     "Danau Toba": ["assets/dpp/danau_toba.jpeg", "assets/dpp/danautoba.jpeg"],
     "Labuan Bajo": ["assets/dpp/labuan_bajo.jpeg", "assets/dpp/labuanbajo.jpeg"]
 }
@@ -1215,74 +1207,51 @@ if pilihan_dpp == "-- Ringkasan Nasional --":
     with col_chart2:
         st.markdown("<div class='chart-card'>", unsafe_allow_html=True)
 
-        var_options = {
-            "Supply_Avg_Hotel_Rating": "Skor Rating Hotel",
-            "GoogleMaps_Avg_Rating": "Skor Atraksi (Google Maps)",
-            "Supply_Total_Hotels": "Total Akomodasi/Hotel",
-            "Search_Volume_Score": "Search Volume Score",
-            "TikTok_Hashtag_Views": "TikTok Hashtag Views",
-            "IG_Total_Engagement": "IG Engagement",
-            "Flight_Frequency": "Frekuensi Penerbangan"
-        }
-        
-        available_vars = {k: v for k, v in var_options.items() if k in df.columns}
-        
-        if available_vars:
-            selected_var = st.selectbox(
-                "Pilih Variabel untuk Klaster 1D:",
-                options=list(available_vars.keys()),
-                format_func=lambda x: available_vars[x],
-                key="var_select_1d"
-            )
-            
-            df["Y_Axis"] = ""
-            
-            fig_1d = px.strip(
-                df,
-                x=selected_var,
-                y="Y_Axis",
-                color="Cluster_K3",
-                hover_name="DPP",
-                color_discrete_map=color_map_scatter,
-                stripmode="overlay"
-            )
-            
-            fig_1d.update_traces(
-                marker=dict(size=16, line=dict(width=1.5, color="#F8FAFC")),
-                jitter=0.1
-            )
-            
-            fig_1d.update_layout(
-                title=dict(
-                    text=f"Klaster 1D: {available_vars[selected_var]}",
-                    font=dict(size=18, color="#F8FAFC", family="Plus Jakarta Sans")
-                ),
-                paper_bgcolor="rgba(0,0,0,0)",
-                plot_bgcolor="rgba(0,0,0,0)",
-                xaxis=dict(
-                    title=dict(text="Nilai Variabel", font=dict(color="#CBD5E1")),
-                    showgrid=True,
-                    gridcolor="rgba(148,163,184,0.16)",
-                    tickfont=dict(color="#CBD5E1")
-                ),
-                yaxis=dict(
-                    title=dict(text="", font=dict(color="#CBD5E1")),
-                    showticklabels=False,
-                    showgrid=False,
-                    zeroline=False
-                ),
-                legend=dict(
-                    title=dict(text="Cluster", font=dict(color="#CBD5E1")),
-                    font=dict(color="#CBD5E1"),
-                    bgcolor="rgba(7,26,51,0.55)",
-                ),
-                margin=dict(l=0, r=0, t=50, b=0)
-            )
-            
-            st.plotly_chart(fig_1d, use_container_width=True)
-        else:
-            st.warning("Data variabel detail tidak ditemukan. Pastikan file 'final_dashboard_dataset.csv' tersedia.")
+        df_sorted = df.sort_values("Gap_Analysis")
+        df_sorted["Color"] = df_sorted["Gap_Analysis"].apply(
+            lambda x: "#D94A38" if x > 0.2 else ("#2F80ED" if x < -0.2 else "#D4AF37")
+        )
 
+        fig_bar = px.bar(
+            df_sorted,
+            x="Gap_Analysis",
+            y="DPP",
+            orientation="h"
+        )
+
+        fig_bar.update_traces(
+            marker_color=df_sorted["Color"],
+            marker_line_width=0
+        )
+
+        fig_bar.add_vline(
+            x=0,
+            line_width=2,
+            line_dash="dash",
+            line_color="#D4AF37"
+        )
+
+        fig_bar.update_layout(
+            title=dict(
+                text="Spektrum Demand–Supply Gap",
+                font=dict(size=18, color="#F8FAFC", family="Plus Jakarta Sans")
+            ),
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
+            xaxis=dict(
+                title=dict(text="Nilai Gap", font=dict(color="#CBD5E1")),
+                showgrid=True,
+                gridcolor="rgba(148,163,184,0.16)",
+                tickfont=dict(color="#CBD5E1")
+            ),
+            yaxis=dict(
+                title=dict(text="", font=dict(color="#CBD5E1")),
+                tickfont=dict(color="#F8FAFC", size=12)
+            ),
+            margin=dict(l=0, r=0, t=50, b=0)
+        )
+
+        st.plotly_chart(fig_bar, use_container_width=True)
         st.markdown("</div>", unsafe_allow_html=True)
 
     st.markdown("<hr>", unsafe_allow_html=True)
